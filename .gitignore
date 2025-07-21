@@ -1,0 +1,17 @@
+# Fichiers compilés
+*.class
+
+# Dossiers temporaires
+/bin/
+/out/
+
+# Dossiers d’environnement IDE
+.vscode/
+.idea/
+
+# Fichiers système ou logs
+*.log
+.DS_Store
+
+# Fichier de config perso
+*.iml
