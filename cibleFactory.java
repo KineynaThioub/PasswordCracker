@@ -1,3 +1,3 @@
 public interface cibleFactory {
-    boolean authenticate(String login, String password);
+    boolean connexion(String login, String password);
 }

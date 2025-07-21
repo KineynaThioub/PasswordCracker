@@ -1,7 +1,10 @@
 public class LocalCible implements cibleFactory {
-    public boolean authenticate(String login, String password) {
-        return false;
-        // Envoyer une requête HTTP POST vers un formulaire PHP
-        // Lire la réponse et retourner true si succès
+
+    private final String loginValide = "admin";
+    private final String passwordValide = "pass123";
+
+    @Override
+    public boolean connexion(String login, String password) {
+        return loginValide.equals(login) && passwordValide.equals(password);
     }
 }

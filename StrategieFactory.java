@@ -1,5 +1,3 @@
 public interface StrategieFactory {
-
-    void execute(String login, cibleFactory target);
-
+    void attaque(String login, cibleFactory target);
 }
