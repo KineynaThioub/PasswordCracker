@@ -16,7 +16,7 @@ L’utilisateur lance l’application `CrackerApp` avec des arguments de ligne d
 - Le **type de cible**
 - Le **login à attaquer**
 
-### 🧪 Exemple de commande
+### Commande
 
 ```bash
 java CrackerApp --type brute_force --target local --login admin
@@ -77,7 +77,8 @@ Mot de passe trouvé : ab
 
 ## 🧱 Principes de conception
 
-
+### Diagramme De Classe
+![Diagramme UML](captures/image.png)
 
 ### 🧪 Design Pattern : Fabrique
 
