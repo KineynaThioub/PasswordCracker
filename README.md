@@ -44,12 +44,12 @@ PasswordCracker/
 ├── .gitignore
 └── README.md
 ```
->  **Remarque importante sur le dossier `cible/` :**  
-> Le dossier `cible/` contient des copies statiques des fichiers PHP (`login.php`, `logout.php`, `dashboard.php`) qui simulent la cible en ligne.  
-> Ces fichiers **ne sont pas exécutables directement** et **ne sont pas connectés au code Java**.  
-> Ils ont été ajoutés uniquement **à des fins de démonstration** dans ce dépôt GitHub.  
-> En réalité, la cible PHP utilisée pendant les tests est hébergée en local dans le dossier suivant :
 
+> 📌 **Remarque importante sur le dossier `cible/` :**  
+> Le dossier `cible/` contient les fichiers PHP (`login.php`, `logout.php`, `dashboard.php`) qui simulent la cible en ligne.  
+> Il s'agit **exactement du même code** que celui utilisé pendant les tests avec le cracker Java.  
+> Toutefois, **ces fichiers ne sont pas exécutables directement depuis ce dépôt**, car ils doivent être placés dans un environnement serveur (comme XAMPP).  
+> En pratique, ces fichiers sont copiés dans le dossier suivant de la machine locale pour être fonctionnels : C:/xampp/htdocs/Cible_Crack
 
 ---
 
