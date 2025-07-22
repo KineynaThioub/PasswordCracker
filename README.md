@@ -3,7 +3,8 @@
 Un mini-projet Java qui simule une **attaque de mots de passe** à l'aide de deux stratégies : 
 - Brute Force 
 - Dictionnaire. 
-L'application cible soit 
+
+L'application cible peut être : 
 - Un système **local**
 - Un formulaire en ligne (**PHP**)
 
@@ -77,14 +78,14 @@ Utilisé pour générer dynamiquement la stratégie et la cible selon les argume
 
 Les stratégies d’attaque implémentent l’interface `StrategieFactory` pour faciliter l’extension.
 
-### 🎯 Cibles modulables
+### Cibles modulables
 
 Le projet peut facilement être étendu pour d'autres types de cibles (API, fichier, base de données...).
 
 ---
 
 
-## 📝 À faire / Extensions possibles
+## À faire / Extensions possibles
 
 - Ajouter une interface graphique
 - Enregistrer les essais et le temps d'exécution
@@ -94,7 +95,7 @@ Le projet peut facilement être étendu pour d'autres types de cibles (API, fich
 
 ---
 
-## 👤 Auteur
+## Auteurs
 
 Projet réalisé par **Fatou Kiné THIOUB**,**Cheikh Ibrahima NDIAYE**, **Coummba FALL**, **Mammadou Makhtar GUEYE**, et **Abdoul Aziz KANE** étudiant en **DIC1** à l’**École Supérieure Polytechnique (ESP)** de l’**UCAD**.
 
