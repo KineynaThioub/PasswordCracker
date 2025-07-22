@@ -106,18 +106,21 @@ Ces variantes sont choisies **automatiquement** par `CrackerApp` en fonction des
 ---
 
 
-## À faire / Extensions possibles
+## Pistes d'amelioration
 
-- Ajouter une interface graphique
-- Enregistrer les essais et le temps d'exécution
-- Hacher les mots de passe dans `LocalAuthenticator`
-- Implémenter des logs au format fichier
+- Ajouter une interface graphique pour faciliter le choix des options.
+- Enregistrer les essais et le temps d'exécution pour analyser les performances.
+- Hacher les mots de passe dans `LocalAuthenticator` pour simuler un vrai système sécurisé.
+- **Permettre à l'utilisateur de spécifier dynamiquement l’URL cible**, afin de rendre le cracker plus générique et utilisable sur n’importe quel formulaire compatible.
+    - Actuellement, l’URL du site ciblé est codée en dur dans `LigneCible.java`.
+    - Une extension possible serait d’accepter l’URL comme **paramètre de ligne de commande** ou **dans un fichier de config**.
+- Modulariser davantage la gestion des cibles locales et distantes pour supporter plus de scénarios (API REST, fichiers JSON, sockets...).
 
 ---
 
 ## Auteurs
 
-Projet réalisé par **Fatou Kiné THIOUB**,**Cheikh Ibrahima NDIAYE**, **Coummba FALL**, **Mammadou Makhtar GUEYE**, et **Abdoul Aziz KANE** étudiant en **DIC1** à l’**École Supérieure Polytechnique (ESP)** de l’**UCAD**.
+Projet réalisé par **Fatou Kiné THIOUB**,**Cheikh Ibrahima NDIAYE**, **Coumba FALL**, **Mammadou Makhtar GUEYE**, et **Abdoul Aziz KANE** étudiants en **DIC1** à l’**École Supérieure Polytechnique (ESP)** de l’**UCAD**.
 
 Dans le cadre du module **Patrons de conception**.
 
