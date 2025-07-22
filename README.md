@@ -44,6 +44,12 @@ PasswordCracker/
 ├── .gitignore
 └── README.md
 ```
+>  **Remarque importante sur le dossier `cible/` :**  
+> Le dossier `cible/` contient des copies statiques des fichiers PHP (`login.php`, `logout.php`, `dashboard.php`) qui simulent la cible en ligne.  
+> Ces fichiers **ne sont pas exécutables directement** et **ne sont pas connectés au code Java**.  
+> Ils ont été ajoutés uniquement **à des fins de démonstration** dans ce dépôt GitHub.  
+> En réalité, la cible PHP utilisée pendant les tests est hébergée en local dans le dossier suivant :
+
 
 ---
 
