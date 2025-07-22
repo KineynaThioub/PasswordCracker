@@ -1,7 +1,6 @@
 # Password Cracker Factory
 
 ## Présentation
-
 Un mini-projet Java qui simule une **attaque de mots de passe** à l'aide de deux stratégies : 
 - Brute Force 
 - Dictionnaire. 
@@ -13,7 +12,6 @@ L'application cible peut être :
 ---
 
 ## Architecture du projet
-
 ```
 PasswordCracker/
 ├── CrackerApp.java
@@ -42,7 +40,6 @@ PasswordCracker/
 ![Diagramme UML](captures/image.png)
 
 ### Design Pattern : Factory Method
-
 Nous avons utilisé le **pattern Factory Method**, qui permet d’instancier dynamiquement des objets sans avoir à connaître leur classe exacte au moment de l’écriture du code.
 
 Dans notre projet, la classe principale `CrackerApp` ne crée **ni les cibles** (locales ou en ligne), **ni les stratégies d’attaque** (force brute ou dictionnaire) elle-même. Elle délègue cette responsabilité à des **factories**, selon les arguments passés en ligne de commande.
@@ -55,11 +52,9 @@ Ce pattern est particulièrement adapté ici car :
 Contrairement au **pattern Abstract Factory**, qui est conçu pour créer des **familles entières** d’objets compatibles, notre besoin ne concerne que des **objets uniques et interchangeables**. C’est pourquoi **le pattern Factory Method est le plus approprié** dans notre cas.
 
 ### Stratégies interchangeables
-
 Les stratégies d’attaque implémentent l’interface `StrategieFactory` pour faciliter l’extension.
 
 ### Cibles modulables
-
 Le projet peut facilement être étendu pour d'autres types de cibles (API, fichier, base de données...).
 
 ### Variantes implementees
@@ -77,7 +72,6 @@ Ces variantes sont choisies **automatiquement** par `CrackerApp` en fonction des
 ---
 
 ## Arguments disponibles
-
 | Argument        | Description                                           | Exemple             |
 |-----------------|-------------------------------------------------------|---------------------|
 | `--type`        | Type d’attaque (`brute_force` ou `dictionnaire`)      | `--type brute_force`|
@@ -87,14 +81,12 @@ Ces variantes sont choisies **automatiquement** par `CrackerApp` en fonction des
 ---
 
 ## Fonctionnement
-
 L’utilisateur lance l’application `CrackerApp` avec des arguments de ligne de commande pour spécifier :
 - La **stratégie d’attaque**
 - Le **type de cible**
 - Le **login à attaquer**
 
 ### Commande
-
 ```bash
 java CrackerApp --type brute_force --target local --login admin
 ```
@@ -102,13 +94,11 @@ java CrackerApp --type brute_force --target local --login admin
 ---
 
 ### Extrait de résultat attendu
-
 ![sortie](captures/essai.png)
 
 ---
 
-## Pistes d'amelioration
-
+## Pistes d'amélioration
 - Ajouter une interface graphique pour faciliter le choix des options.
 - Enregistrer les essais et le temps d'exécution pour analyser les performances.
 - Hacher les mots de passe dans `LocalAuthenticator` pour simuler un vrai système sécurisé.
@@ -120,7 +110,6 @@ java CrackerApp --type brute_force --target local --login admin
 ---
 
 ## Auteurs
-
 Projet réalisé par **Fatou Kiné THIOUB**,**Cheikh Ibrahima NDIAYE**, **Coumba FALL**, **Mammadou Makhtar GUEYE**, et **Abdoul Aziz KANE** étudiants en **DIC1** à l’**École Supérieure Polytechnique (ESP)** de l’**UCAD**.
 
 Dans le cadre du module **Patrons de conception**.
@@ -128,5 +117,4 @@ Dans le cadre du module **Patrons de conception**.
 ---
 
 ## Licence
-
 Ce projet est réalisé **à but pédagogique** et n'est pas destiné à une utilisation malveillante.
