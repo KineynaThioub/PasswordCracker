@@ -22,7 +22,7 @@ public class LocalAuthenticator {
     // Login et mot de passe corrects définis en dur.
     // Dans un vrai système, ceux-ci ne seraient jamais en dur et seraient hachés.
     private static final String CORRECT_USERNAME = "admin";
-    private static final String CORRECT_PASSWORD = "ab"; // C'est le mot de passe que votre cracker local devra trouver
+    private static final String CORRECT_PASSWORD = "a"; // C'est le mot de passe que votre cracker local devra trouver
 
     /**
      * Point d'entrée du programme LocalAuthenticator.

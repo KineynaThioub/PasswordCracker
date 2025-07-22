@@ -26,7 +26,7 @@ public class LocalCible implements cibleFactory {
 
             while ((line = reader.readLine()) != null) {
                 System.out.println("[AUTH] " + line); // Pour debug
-                if (line.toLowerCase().contains("Connexion reussie")) {
+                if (line.toLowerCase().contains("connexion reussie")) {
                     success = true;
                     break;
                 }

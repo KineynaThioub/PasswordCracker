@@ -3,7 +3,7 @@ session_start();
 
 // --- Configuration ---
 $correct_username = "admin";
-$correct_password = "password123";
+$correct_password = "a";
 
 // --- Initialisation des variables pour les messages et pré-remplissage ---
 $message_type = "";
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($submitted_username === $correct_username && $submitted_password === $correct_password) {
         $message_type = "success";
-        $message_text = "Connexion réussie ! Redirection en cours...";
+        $message_text = "Connexion reussie ! Redirection en cours...";
         $show_login_form = false; // Ne plus afficher le formulaire
         
         // Stocker les infos de session AVANT la redirection

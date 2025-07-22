@@ -26,7 +26,7 @@ public class CrackerApp {
 
         StrategieFactory strategie;
         if ("dictionnaire".equals(type) || "dictionary".equals(type)) {
-            strategie = new DictionnaireStrategie();
+            strategie = new DictionnaireStrategie("rockyou.txt");
         } else {
             strategie = new BruteForceStrategie();
         }
