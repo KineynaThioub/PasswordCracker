@@ -1,8 +1,8 @@
 # 🔐 Password Cracker Factory
 
 Un mini-projet Java qui simule une **attaque de mots de passe** à l'aide de deux stratégies : 
--Brute Force 
--Dictionnaire. 
+- Brute Force 
+- Dictionnaire. 
 L'application cible soit 
 - Un système **local**
 - Un formulaire en ligne (**PHP**)
@@ -60,18 +60,7 @@ PasswordCracker/
 
 ## 📌 Extrait de résultat attendu
 
-```bash
-Démarrage de l'attaque...
-Type : brute_force
-Cible : local
-Login : admin
-----------------------------------------
-[TEST] a
-[AUTH] Erreur.
-[TEST] ab
-[AUTH] Connexion reussie.
-Mot de passe trouvé : ab
-```
+![sortie](captures/essai.png)
 
 ---
 
@@ -94,15 +83,6 @@ Le projet peut facilement être étendu pour d'autres types de cibles (API, fich
 
 ---
 
-## 📷 Capture d’écran (exemple CLI)
-
-> _Ajoutez ici une capture d'écran de l'attaque en console si souhaité._
-
-```markdown
-![demo](./screenshot.png)
-```
-
----
 
 ## 📝 À faire / Extensions possibles
 
@@ -116,7 +96,7 @@ Le projet peut facilement être étendu pour d'autres types de cibles (API, fich
 
 ## 👤 Auteur
 
-Projet réalisé par **[Ton Nom]**, étudiant en **DIC1** à l’**École Supérieure Polytechnique (ESP)** de l’**UCAD**.
+Projet réalisé par **Fatou Kiné THIOUB**,**Cheikh Ibrahima NDIAYE**, **Coummba FALL**, **Mammadou Makhtar GUEYE**, et **Abdoul Aziz KANE** étudiant en **DIC1** à l’**École Supérieure Polytechnique (ESP)** de l’**UCAD**.
 
 Dans le cadre du module **Patrons de conception**.
 
