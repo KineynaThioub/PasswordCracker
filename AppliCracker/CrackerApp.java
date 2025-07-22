@@ -26,12 +26,12 @@ public class CrackerApp {
 
         StrategieFactory strategie;
         if ("dictionnaire".equals(type) || "dictionary".equals(type)) {
-            strategie = new DictionnaireStrategie("rockyou.txt");
+            strategie = new DictionnaireStrategie("../Dictionnaire/rockyou.txt");
         } else {
             strategie = new BruteForceStrategie();
         }
 
-        System.out.println("Démarrage de l'attaque...");
+        System.out.println("Demarrage de l'attaque...");
         System.out.println("Type : " + type);
         System.out.println("Cible : " + target);
         System.out.println("Login : " + login);

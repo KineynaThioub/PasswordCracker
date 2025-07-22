@@ -16,7 +16,7 @@ public class BruteForceStrategie implements StrategieFactory {
         if (prefix.length() == length) {
             System.out.println("[TEST] " + prefix);
             if (cible.connexion(login, prefix)) {
-                System.out.println("Mot de passe trouvé : " + prefix);
+                System.out.println("Mot de passe trouve : " + prefix);
                 found = true;
             }
             return;

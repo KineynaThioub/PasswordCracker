@@ -27,7 +27,7 @@ public class LigneCible implements cibleFactory {
 
             int status = con.getResponseCode();
 
-            // Lire la réponse avec encodage UTF-8
+            // Lire la reponse avec encodage UTF-8
             BufferedReader in = new BufferedReader(new InputStreamReader(
                 status >= 200 && status < 400 ? con.getInputStream() : con.getErrorStream(),
                 StandardCharsets.UTF_8
@@ -42,13 +42,13 @@ public class LigneCible implements cibleFactory {
 
             String responseStr = response.toString().toLowerCase();
             
-            // Debug pour voir ce qui est reçu (à retirer après tests)
+            // Debug pour voir ce qui est recu
             System.out.println("[DEBUG] Testing " + login + ":" + password);
             System.out.println("[DEBUG] Status: " + status);
             System.out.println("[DEBUG] Response contains 'connexion reussie': " + responseStr.contains("connexion reussie"));
             System.out.println("[DEBUG] Response contains 'échec': " + responseStr.contains("échec"));
 
-            // Méthodes de détection multiples
+            // Methodes de detection multiples
             boolean hasSuccess = responseStr.contains("connexion reussie") ||
                                responseStr.contains("connexion réussie") ||
                                responseStr.contains("redirection en cours");
@@ -57,17 +57,17 @@ public class LigneCible implements cibleFactory {
                              responseStr.contains("echec de la connexion") ||
                              responseStr.contains("nom d'utilisateur ou mot de passe incorrect");
 
-            // Succès = message de succès présent OU (pas de message d'erreur ET status OK)
+            // Succes = message de succes present OU (pas de message d'erreur ET status OK)
             boolean isSuccess = hasSuccess || (!hasError && status == 200);
             
             if (isSuccess) {
-                System.out.println("*** MOT DE PASSE TROUVÉ: " + password + " ***");
+                System.out.println("*** MOT DE PASSE TROUVE: " + password + " ***");
             }
 
             return isSuccess;
 
         } catch (Exception e) {
-            System.err.println("Erreur de connexion vers l'API : " + e.getMessage());
+            System.err.println("Erreur de connexion: " + e.getMessage());
             return false;
         }
     }

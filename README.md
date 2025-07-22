@@ -14,21 +14,34 @@ L'application cible peut être :
 ## Architecture du projet
 ```
 PasswordCracker/
-├── CrackerApp.java
-├── BruteForceStrategie.java
-├── DictionnaireStrategie.java
-├── LocalCible.java
-├── LigneCible.java
-├── LocalAuthenticator.java
-├── cibleFactory.java
-├── StrategieFactory.java
-├── LigneBruteCracker.java
-├── LigneDictCracker.java
-├── LocalBruteCracker.java
-├── LocalDictCracker.java
-├── login.php
-├── logout.php
-├── dashboard.php
+├── AppliCracker/
+│   ├── BruteForceStrategie.java
+|   ├── cibleFactory.java
+|   ├── CrackFactory.java
+|   ├── CrackerApp.java
+|   ├── DictionnaireStrategie.java
+|   ├── LigneBruteCracker.java
+|   ├── LigneCible.java
+|   ├── LigneDictCracker.java
+|   ├── LocalAuthenticator.java
+|   ├── LocalBruteCracker.java
+|   ├── LocalCible.java
+|   ├── LocalDictCracker.java
+|   ├── StrategieFactory.java
+│
+├── CiblePHP/
+│   ├── login.php
+│   ├── dashboard.php
+│   ├── logout.php
+│
+├── Dictionnaire/
+│   └── rockyou.txt
+│
+├── captures/
+│   ├── essai.png
+│   └── image.png
+│
+├── .gitignore
 └── README.md
 ```
 

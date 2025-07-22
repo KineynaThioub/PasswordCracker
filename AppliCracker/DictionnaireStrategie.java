@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class DictionnaireStrategie implements StrategieFactory {
 
-    private String cheminFichier="rockyou.txt";
+    private String cheminFichier="../Dictionnaire/rockyou.txt";
 
     
     public DictionnaireStrategie(String cheminFichier) {

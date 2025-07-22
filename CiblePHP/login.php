@@ -1,17 +1,14 @@
 <?php
 session_start();
 
-// --- Configuration ---
 $correct_username = "admin";
 $correct_password = "a";
 
-// --- Initialisation des variables pour les messages et pré-remplissage ---
 $message_type = "";
 $message_text = "";
-$submitted_username = ""; // Pour garder le nom d'utilisateur pré-rempli en cas d'erreur
-$show_login_form = true; // Contrôle l'affichage du formulaire ou du message de succès
+$submitted_username = ""; 
+$show_login_form = true; 
 
-// --- Traitement de la soumission du formulaire ---
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $submitted_username = htmlspecialchars($_POST["username"] ?? '');
     $submitted_password = htmlspecialchars($_POST["password"] ?? '');
@@ -21,20 +18,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message_text = "Connexion reussie ! Redirection en cours...";
         $show_login_form = false; // Ne plus afficher le formulaire
         
-        // Stocker les infos de session AVANT la redirection
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $submitted_username;
         $_SESSION['login_time'] = time();
 
-        // Définir un délai avant la redirection pour que l'utilisateur puisse voir le message
-        // Pour le cracker, la redirection est toujours détectable immédiatement
-        header("Refresh: 2; URL=dashboard.php"); // Redirige après 2 secondes
-        http_response_code(200); // Maintenu pour la détection du cracker basé sur le statut
-        exit(); // Important: Arrêter l'exécution du script
+        header("Refresh: 2; URL=dashboard.php");
+        http_response_code(200); 
+        exit(); 
     } else {
         $message_type = "error";
         $message_text = "Échec de la connexion. Nom d'utilisateur ou mot de passe incorrect.";
-        http_response_code(200); // Pas de redirection en cas d'échec
+        http_response_code(200); 
     }
 }
 ?>
@@ -53,13 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Bleu doux */
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
             margin: 0;
             color: #333;
-            overflow: hidden; /* Pour gérer les animations de fond */
+            overflow: hidden; 
         }
         .login-container {
-            background-color: rgba(255, 255, 255, 0.95); /* Légèrement transparent */
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 45px;
             border-radius: 15px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -147,13 +141,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             to { opacity: 1; transform: translateY(0); }
         }
         .success {
-            background-color: #e6ffed; /* Vert très pâle */
-            color: #008744; /* Vert plus foncé */
+            background-color: #e6ffed; 
+            color: #008744; 
             border: 1px solid #b2f1cc;
         }
         .error {
-            background-color: #ffebe6; /* Rouge très pâle */
-            color: #d8000c; /* Rouge plus foncé */
+            background-color: #ffebe6; 
+            color: #d8000c; 
             border: 1px solid #fccbcb;
         }
         .message p {
@@ -173,7 +167,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-decoration: underline;
         }
         
-        /* Background animations */
         .bubble-container {
             position: absolute;
             width: 100%;

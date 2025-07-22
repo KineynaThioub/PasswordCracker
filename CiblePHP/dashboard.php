@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Vérifier si l'utilisateur est connecté. Si non, rediriger vers la page de login.
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: login.php");
     exit();
@@ -50,14 +49,14 @@ $sensitive_info = [
             font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align content to top */
+            justify-content: flex-start; 
             align-items: center;
             min-height: 100vh;
             background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
             margin: 0;
-            padding: 30px 20px; /* Add some padding for better spacing */
+            padding: 30px 20px; 
             color: #333;
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            box-sizing: border-box; 
         }
         .dashboard-container {
             background-color: white;
@@ -65,7 +64,7 @@ $sensitive_info = [
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             width: 100%;
-            max-width: 900px; /* Larger container for more info */
+            max-width: 900px; 
             box-sizing: border-box;
             text-align: center;
             animation: fadeIn 0.8s ease-out;
@@ -126,7 +125,7 @@ $sensitive_info = [
         .info-block ul li strong {
             color: #2c3e50;
             margin-right: 8px;
-            min-width: 120px; /* Ensure labels align */
+            min-width: 120px;
         }
         .info-block ul li:last-child {
             margin-bottom: 0;
