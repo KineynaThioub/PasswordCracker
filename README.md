@@ -1,4 +1,6 @@
-# 🔐 Password Cracker Factory
+# Password Cracker Factory
+
+## Présentation
 
 Un mini-projet Java qui simule une **attaque de mots de passe** à l'aide de deux stratégies : 
 - Brute Force 
@@ -7,21 +9,6 @@ Un mini-projet Java qui simule une **attaque de mots de passe** à l'aide de deu
 L'application cible peut être : 
 - Un système **local**
 - Un formulaire en ligne (**PHP**)
-
----
-
-## Fonctionnement
-
-L’utilisateur lance l’application `CrackerApp` avec des arguments de ligne de commande pour spécifier :
-- La **stratégie d’attaque**
-- Le **type de cible**
-- Le **login à attaquer**
-
-### Commande
-
-```bash
-java CrackerApp --type brute_force --target local --login admin
-```
 
 ---
 
@@ -46,22 +33,6 @@ PasswordCracker/
 ├── dashboard.php
 └── README.md
 ```
-
----
-
-## Arguments disponibles
-
-| Argument        | Description                                           | Exemple             |
-|-----------------|-------------------------------------------------------|---------------------|
-| `--type`        | Type d’attaque (`brute_force` ou `dictionnaire`)      | `--type brute_force`|
-| `--target`      | Cible (`local` ou `online`)                           | `--target local`    |
-| `--login`       | Identifiant à attaquer                                | `--login admin`     |
-
----
-
-## Extrait de résultat attendu
-
-![sortie](captures/essai.png)
 
 ---
 
@@ -105,6 +76,36 @@ Ces variantes sont choisies **automatiquement** par `CrackerApp` en fonction des
 
 ---
 
+## Arguments disponibles
+
+| Argument        | Description                                           | Exemple             |
+|-----------------|-------------------------------------------------------|---------------------|
+| `--type`        | Type d’attaque (`brute_force` ou `dictionnaire`)      | `--type brute_force`|
+| `--target`      | Cible (`local` ou `online`)                           | `--target local`    |
+| `--login`       | Identifiant à attaquer                                | `--login admin`     |
+
+---
+
+## Fonctionnement
+
+L’utilisateur lance l’application `CrackerApp` avec des arguments de ligne de commande pour spécifier :
+- La **stratégie d’attaque**
+- Le **type de cible**
+- Le **login à attaquer**
+
+### Commande
+
+```bash
+java CrackerApp --type brute_force --target local --login admin
+```
+
+---
+
+### Extrait de résultat attendu
+
+![sortie](captures/essai.png)
+
+---
 
 ## Pistes d'amelioration
 
@@ -126,6 +127,6 @@ Dans le cadre du module **Patrons de conception**.
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet est réalisé **à but pédagogique** et n'est pas destiné à une utilisation malveillante.
