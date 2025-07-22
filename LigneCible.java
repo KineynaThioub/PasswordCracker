@@ -9,13 +9,13 @@ public class LigneCible implements cibleFactory {
 
     public boolean connexion(String login, String password) {
         try {
-            URL url = new URL("http://monsite.com/api/login");
+            URL url = new URL("http://localhost/Cible_Crack/login.php");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
             con.setDoOutput(true);
             con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 
-            String body = "login=" + URLEncoder.encode(login, "UTF-8") +
+            String body = "username=" + URLEncoder.encode(login, "UTF-8") +
                           "&password=" + URLEncoder.encode(password, "UTF-8");
 
             OutputStream os = con.getOutputStream();
@@ -37,7 +37,8 @@ public class LigneCible implements cibleFactory {
             in.close();
 
             String responseStr = response.toString().toLowerCase();
-            return responseStr.contains("success") || responseStr.contains("connected");
+            //return responseStr.contains("success") || responseStr.contains("connected");
+            return responseStr.contains("connexion réussie");
 
         } catch (Exception e) {
             System.err.println("Erreur de connexion vers l'API : " + e.getMessage());
